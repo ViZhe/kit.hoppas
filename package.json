@@ -13,7 +13,7 @@
     "babel-register": "^6.9.0",
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
-    "eslint": "^3.0.1",
+    "eslint": "^3.1.1",
     "eslint-config-xo": "^0.15.2",
     "eslint-plugin-babel": "^3.3.0",
     "gulp": "gulpjs/gulp#4.0",
