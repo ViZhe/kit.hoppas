@@ -33,7 +33,7 @@
     "gulp-stylint": "^4.0.1",
     "gulp-stylus": "^2.7.0",
     "gulp-util": "^3.0.7",
-    "imagemin-pngquant": "^5.0.0",
+    "imagemin-pngquant": "^6.0.0",
     "webpack": "^3.10.0",
     "webpack-stream": "^4.0.0",
     "yargs": "^11.0.0"
