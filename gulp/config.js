@@ -52,40 +52,40 @@ const config = {
   },
   styles: {
     src: {
-      main: `${path.src}styles/index.styl`,
-      all: `${path.src}styles/**/*.styl`,
+      main: `${path.src}styles/index.scss`,
+      all: `${path.src}styles/**/*.scss`,
     },
     dest: `${path.dest}frontend/styles/`,
-    watch: `${path.src}styles/**/*.styl`,
-    base64: {
-      baseDir: `${path.dest}frontend/media/`,
-      extensions: ['png', 'svg', 'jpg'],
-      maxImageSize: 1024 * 10,
+    watch: `${path.src}styles/**/*.scss`,
+    postcss: {
+      assets: {
+        loadPaths: [
+          `${path.dest}frontend/media`,
+        ],
+        relative: true,
+        cache: true,
+        cachebuster: true,
+      },
+      autoprefixer: {
+        browsers: [
+          '> 5%',
+          'last 2 versions',
+          'Explorer >= 10',
+          'iOS >= 7.1',
+        ],
+      },
     },
-    autoprefixer: {
-      browsers: [
-        '> 5%',
-        'last 2 versions',
-        'Explorer >= 10',
-        'iOS >= 7.1',
-      ],
+    sass: {
+      outputStyle: 'expanded',
     },
   },
   fonts: {
-    src: `${path.src}fonts/fonts.styl`,
+    src: `${path.src}fonts/fonts.css`,
     dest: `${path.dest}frontend/styles/`,
-    watch: `${path.src}fonts/*.styl`,
+    watch: `${path.src}fonts/*.css`,
     base64: {
       extensions: ['woff'],
       maxImageSize: 1024 * 1024 * 10,
-    },
-    autoprefixer: {
-      browsers: [
-        '> 5%',
-        'last 2 versions',
-        'Explorer >= 10',
-        'iOS >= 7.1',
-      ],
     },
   },
   html: {
